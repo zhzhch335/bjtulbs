@@ -57,8 +57,7 @@
             style: 'dark',
             color: '#6ab494'
         });
-        funIniGroup();
-        pushbutton();
+        funIniGroup();        
     }
 
     function funIniGroup(){
@@ -90,30 +89,7 @@
 
         });
     }
-    function pushbutton(){
-        var button=api.require('UIbutton');
-        button.open({
-         bg:{ normal:"#ff0000" },
-         rect:{
-            x:100,
-            y:100,
-            w:80,
-            h:50
-         },
-        title: {
-         size: 14,
-         highlight: '高亮状态标题',
-         active: '选中后标题',
-         normal: '常态标题',
-         highlightColor: '#000000',
-         activeColor: '#000adf',
-         normalColor: '#ff0000',
-         alignment: 'center'
-         },
-        },function(ret,err){
-           api.alert({msg:ret.id});
-        });
-    }
+
     // 随意切换按钮
     /*function randomSwitchBtn( tag ) {
         if( tag == $api.dom('#footer li.active') )return;
