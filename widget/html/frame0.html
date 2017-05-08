@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
-    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-    <title>地图</title>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no"/>
+    <title>
+      地图
+    </title>
     <link rel="stylesheet" type="text/css" href="../css/api.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     <style>
         .empty{ text-align: center; padding: 120px 0; }
     </style>
-</head>
-<body>
-    <div class="empty"></div>
-</body>
+  </head>
+  <body>
+    <div class="empty">
+    </div>
+    <script type="text/javascript">
+        alert(1);                
+        apiready=function(){
+            var map=api.require('bMap');
+            map.open({center: {
+        lon: 116.4021310000,
+        lat: 39.9994480000
+    },},function(ret){
+                if(ret.status){
+                    alert("success!");
+                }
+        });};
+        alert(2);    
+    </script>
+  </body>
 </html>
